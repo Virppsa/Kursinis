@@ -138,9 +138,11 @@
         \singlespacing
         {\begin{tabular}[t]{l l}%
           & \medskip Atliko: \@status \\
-          & \medskip\bigskip \@author \hfill \@signatureplace \\
+          & \medskip\bigskip \@author \hfill \\
+          % \@signatureplace 
           & \medskip Darbo vadovas: \\
-          & \@supervisor \hfill  \@signatureplace
+          & \@supervisor \hfill  
+          % \@signatureplace
         \end{tabular} \par}%
      \end{flushright}
      \@ifundefined{@titleineng}{\vskip 4.2cm}{\vskip 3.2cm}
@@ -150,10 +152,13 @@
         \singlespacing
         {\begin{tabular}[t]{l l}%
           \medskip & Atliko: \@status \\
-          \medskip\bigskip & \@author \hfill \@signatureplace \\
-          \medskip\bigskip & \@secondauthor \hfill \@signatureplace \\
+          \medskip\bigskip & \@author \hfill \\
+          % \@signatureplace 
+          \medskip\bigskip & \@secondauthor \hfill  \\
+          % \@signatureplace
           & \medskip Darbo vadovas: \\
-          & \@supervisor \hfill  \@signatureplace
+          & \@supervisor \hfill  
+          % \@signatureplace
         \end{tabular} \par}%
      \end{flushright}
      \@ifundefined{@titleineng}{\vskip 3cm}{\vskip 2cm}
