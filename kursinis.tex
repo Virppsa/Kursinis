@@ -45,14 +45,14 @@
 % Įvade apibūdinamas darbo tikslas, temos aktualumas ir siekiami rezultatai.
 Dirbtinio intelekto (DI) kūrimas ir pritaikymas šiandien yra svarbesnis nei bet kada anksčiau. Ši technologija pritaikoma praktiškai kiekvienoje pramonės šakoje, o kai kuriose srityse, pavyzdžiui, gyvybės gelbėjimo technologijose, DI tampa nepakeičiamas. Medicinoje DI padeda įtarti odos vėžį, (pvz. melanomą \cite{Melanoma}), ekstremalių situacijų valdymo srityje prognozuoti žemės drebėjimus \cite{Drebejimai} ar cunamius \cite{Cunamiai}, o tai gelbsti gyvybes. Todėl tampa būtina užtikrinti, kad DI modelius naudojančios sistemos generuodamos informaciją ją pateiktų korektiškai.
 
-Tobulėjant DI technologijoms, vis labiau išryškėja tokios problemos kaip DI modelių kolapsas (angl. \textsl{AI model collapse}). Šis reiškinys šaltinyje \cite{AICollapseNature} apibūdinamas kaip procesas, kurio metu DI modeliai (šiuo atveju generatyvinis intelektas (GenAI)), iteratyviai mokydamiesi naudodami jų pačių sugeneruotus duomenimis, praranda gebėjimą tiksliai atspindėti pradinę duomenų informaciją. Svarbu pabrėžti, kad terminas \enquote{DI modeliai} \cite{AICollapseNature} straipsnyje (taip pat ir kituose populiariuose straipsniuose šia tema, pvz., \cite{DesniuPasiulymai}, \cite{modelCollapseRef}) naudojamas kaip sinonimas giliųjų neuroninių tinklų apibūdinimui, nes tyrimuose nagrinėjami tik gilieji neuroniniai tinklai. Ši problema ypač aktuali, žinant kaip plačiai yra naudojami kompanijos \enquote{OpenAI} DI produktai kaip \enquote{DALL-E},\enquote{GPT}, \enquote{Sora}, o jų sugeneruoti rezultatai internete gali užteršti būsimus mokymosi duomenų rinkinius. Šių produktų naudojimas pamažu plinta į visas industrijas, todėl DI modelių kolapsas gali lemti nekorektiškos informacijos skleidimą, kuris potencialiai pakenktų vartotojams.  
+Tobulėjant DI technologijoms, vis labiau išryškėja tokios problemos kaip DI modelių kolapsas (angl. \textsl{AI model collapse}). Šis reiškinys šaltinyje \cite{AICollapseNature} apibūdinamas kaip procesas, kurio metu DI modeliai (šiuo atveju generatyvinis intelektas (GenAI)), iteratyviai mokydamiesi naudodami jų pačių sugeneruotus duomenimis, praranda gebėjimą tiksliai atspindėti pradinę duomenų informaciją. Terminas \enquote{DI modeliai} \cite{AICollapseNature} straipsnyje ir kituose šios temos darbuose (\cite{DesniuPasiulymai, modelCollapseRef}, naudojamas kaip sinonimas giliųjų neuroninių tinklų apibūdinimui, nes tyrimuose nagrinėjami tik jie. Ši problema ypač aktuali, žinant kaip plačiai yra naudojami kompanijos \enquote{OpenAI} DI produktai kaip \enquote{DALL-E},\enquote{GPT}, \enquote{Sora}, o jų sugeneruoti rezultatai internete gali užteršti būsimus mokymosi duomenų rinkinius. Šių produktų naudojimas pamažu plinta į visas industrijas, todėl DI modelių kolapsas gali lemti nekorektiškos informacijos skleidimą, kuris potencialiai pakenktų vartotojams.  
 
-Šių metų tyrimai nustatė keletą mechanizmų ir rizikų, susijusių su DI modelių kolapsu. Pavyzdžiui, tyrime 
+Pastarųjų metų tyrimai nustatė keletą mechanizmų ir rizikų, susijusių su DI modelių kolapsu. Pavyzdžiui, tyrime 
 \cite{ModelsGoMAD} apibrėžiama, kaip rekursiniai mokymo ciklai (angl. \textsl{recursive training loops}), tokie kaip visiškai sintetiniai ciklai (angl. \textsl{fully synthetic loops}), sintetiniai augmentacijų ciklai (angl. \textsl{synthetic augmentation loops}) ir ciklai su šviežiais duomenimis (angl. \textsl{fresh data loops}), gali skirtingai paspartinti modelių kolapsą. 
 
 % Kitas tyrimas \cite{FairnessFeedbackLoops} akcentuoja, kaip grįžtamojo ryšio ciklai (angl. \textsl{feedback loops}) gali sustiprinti DI modelių etinį šališkumą (angl. \textsl{bias amplification})}. 
 
-Tuo tarpu tyrimas \cite{AICollapseNature}, paskelbtas žurnale \enquote{Nature}, pateikia pagrindines kolapso apibrėžtis bei su kolapsu susijusias klaidas, kurios padeda giliau suprasti, kaip galima atpažinti DI modelių kolapsą.
+Shumailov et al. tyrime \cite{AICollapseNature} pateikia pagrindines kolapso apibrėžtis bei su kolapsu susijusias klaidas, kurios padeda giliau suprasti, kaip galima atpažinti DI modelių kolapsą.
 
 Svarbu paminėti, kad Europos Sąjungos pasiūlytas Dirbtinio intelekto aktas \cite{AIEuropeanAct} gali svariai prisidėti prie DI modelių kolapso problematikos sprendimo. Jame pateikti reglamentai netiesiogiai gali prisidėti prie kai kurių DI sistemų kolapso rizikos mažinimo. Toks taikymas yra itin svarbus didelės rizikos DI sistemoms.
 
@@ -66,7 +66,7 @@ Svarbu paminėti, kad Europos Sąjungos pasiūlytas Dirbtinio intelekto aktas \c
 \begin{enumerate}
     \item Išanalizuoti literatūrą, susijusią su DI modelių kolapsu, apimant pagrindinius mechanizmus, rizikas ir galimus sprendimus. Aprašyti DI modelių kolapso atpažinimo technikas, remiantis šiuolaikiniais tyrimais.
     \item Apibrėžti pagrindines DI modelių kolapso prevencijos strategijas, įtraukiant Europos Sąjungos DI aktą ir jo įtaką DI modelių stabilumui.
-    \item Atpažinti VAE modelio kolapsą, mokant jį su MNIST vaizdų rinkiniu, kuris skiriasi nuo žmonių nuotraukų (dažnai nagrinėjamų kituose straipsniuose).
+    \item Atlikti eksperimentą su VAE modeliu, mokant jį MNIST duomenų rinkiniu, siekiant ištirti modelio kolapso reiškinį.
     \item Aptarti etines implikacijas, susijusias su DI modelių kolapsu ir jo prevencija.
     \item Parengti rekomendacijas, pagrįstas atliktos analizės rezultatais, kurios galėtų būti pritaikomos moksliniuose ir praktiniuose kontekstuose.
 \end{enumerate}
@@ -84,9 +84,9 @@ Svarbu paminėti, kad Europos Sąjungos pasiūlytas Dirbtinio intelekto aktas \c
 % Šioje dalyje aptariama skirtingą literatūra DI modelių kolapso tematika. 
 
 \subsection{Kas yra DI modelių kolapsas?}
-Šio termino apibrėžimas yra gana naujas, tačiau dažniausiai DI modelių kolapso tema remiamasi \enquote{Nature} žurnale publikuotu straipsniu \cite{AICollapseNature}. Straipsnyje informacija pateikta aiškiau, papildyta svarbiomis detalėmis, todėl šiame darbe vadovaujamasi būtent juo.
+Šio termino apibrėžimas yra gana naujas, tačiau dažniausiai DI modelių kolapso tema remiamasi \enquote{Nature} žurnale publikuotu straipsniu \cite{AICollapseNature}.
 
-Tyrimas \cite{AICollapseNature} pateikia pagrindinį DI modelių kolapso apribrėžimą kaip kaip degeneratyvų procesą, kuris atsiranda, kai generatyviniai modeliai mokomi naudojant jų pačių sugeneruotus duomenis. Autoriai teigia, jog tai lemia vis didesnį mokymo duomenų užterštumą ir, galiausiai, modeliai pradeda klaidingai suvokti tikrovę.
+Shumailov et al. tyrime \cite{AICollapseNature} pateikia pagrindinį DI modelių kolapso apribrėžimą kaip kaip degeneratyvų procesą, kuris atsiranda, kai generatyviniai modeliai mokomi naudojant jų pačių sugeneruotus duomenis. Autoriai teigia, jog tai lemia vis didesnį mokymo duomenų užterštumą ir, galiausiai, modeliai pradeda klaidingai suvokti tikrovę.
 
 Autoriai tame pačiame straipsnyje taip pat paryškina, kad yra dviejų tipų DI modelių kolapsas: ankstyvasis DI modelių kolapsas (angl. \textsl{early AI model collapse}) ir vėlyvasis DI modelių kolapsas (angl. \textsl{late AI model collapse}). Ankstyvasis DI modelių kolapsas, tai, kai modelis pradeda prarasti informaciją apie skirstinio kraštus (angl. \textsl{tails of a distribution}). Tai reiškia, kad rečiau naudojami duomenų elementai gali išnykti ankstyvuosiuose mokymo etapuose. Skirstinio kraštų paaiškinimas žr. \ref{img:uodegos} pav. 
 
@@ -94,18 +94,15 @@ Autoriai tame pačiame straipsnyje taip pat paryškina, kad yra dviejų tipų DI
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{img/normaliojo_skirstinio_grafikas.png}
-    \caption{\textbf{Teorinis normaliojo skirstinio duomenų kraštų atvaizdavimas pagal \cite{Statistika} knygoje pateikiamą informaciją}. Tai toks skirstinys, kai duomenys yra simetriškai pasiskirstę aplink vidurį, o retesni duomenys yra kraštuose. \textcolor{raudona}{Kairysis kraštas (raudona)} vaizduoja mažo tankio, retai pasitaikančius duomenis vienoje skirstinio pusėje, o \textcolor{zalia}{dešinioji uodega (žalia)} rodo panašaus pobūdžio retus duomenis kitoje pusėje.}  
+    \caption{\textbf{Teorinis normaliojo skirstinio duomenų kraštų atvaizdavimas pagal \cite{Statistika} knygoje pateikiamą informaciją}. Tai toks skirstinys, kai duomenys yra simetriškai pasiskirstę aplink vidurį, o retesni duomenys yra kraštuose. \textcolor{raudona}{Kairysis kraštas (raudona)} vaizduoja mažo tankio, retai pasitaikančius duomenis vienoje skirstinio pusėje, o \textcolor{zalia}{dešinysis kraštas (žalia)} rodo panašaus pobūdžio retus duomenis kitoje pusėje.}  
     \label{img:uodegos}
 \end{figure}
 
 
-Vėlyvasis modelių kolapsas įvyksta tada, kai modelis konverguoja į skirstinį, kuris beveik visiškai neatitinka pradinio. Pavyzdžiui, pradinis skirstinys gali būti normalusis skirstinys (žr. \ref{img:textCollapse} pav.), tačiau po modelio kolapso jis pasikeičia į visiškai kitokį, kuris nebeatspindi pradinės duomenų struktūros.
+Vėlyvasis modelių kolapsas įvyksta tada, kai modelis konverguoja į skirstinį, kuris beveik visiškai neatitinka pradinio. Pavyzdžiui, pradinis skirstinys gali būti normalusis skirstinys, tačiau po modelio kolapso jis pasikeičia į visiškai kitokį, kuris nebeatspindi pradinės duomenų struktūros .
 
 
-
-
-
-Verta paminėti, kad DI modelių kolapsą galima aiškiai pastebėti vizualiai analizuojant jų išvestis. Pavyzdžiui, straipsnyje \cite{AICollapseNature} pateikiamas kelių generacijų modelio degradavimo procesas anglų kalba. 
+Verta paminėti, kad DI modelių kolapsą galima aiškiai pastebėti vizualiai analizuojant jų išvestis. Pavyzdžiui, straipsnyje \cite{AICollapseNature} pateikiamas kelių generacijų modelio degradavimo procesas anglų kalba. (žr. \ref{img:textCollapse} pav.)
 
 \begin{figure}[H]
     \centering
@@ -117,12 +114,12 @@ Verta paminėti, kad DI modelių kolapsą galima aiškiai pastebėti vizualiai a
 
 Ankstyvosiose generacijose modelio išvestys dar išlaiko sakinių logiką, galima suprasti pagrindinę teksto mintį, o frazės nėra dažnai kartojamos. Tačiau vėlesnėse generacijose pastebima, kad žodžiai pradeda kartotis vis dažniau, tekstas praranda loginę struktūrą, o sakiniai tampa visiškai nelogiški.
 
-Panašus procesas pastebimas ir nuotraukas generuojančiuose DI modeliuose, kaip aprašyta straipsnyje \cite{ModelsGoMAD} (žr. \ref{img:ciklai} pav.). Čia matoma, kad didėjant generacijų skaičiui modelis pradeda kurti vis panašesnes žmonių nuotraukas. Vėlesnėse generacijose beveik visi žmonės yra vienodos odos spalvos, jų veiduose matoma vienoda šypsena, o nuotraukų fonai tampa vienodi – dažniausiai žali arba pilki. 
+Panašus procesas pastebimas ir nuotraukas generuojančiuose DI modeliuose, kaip aprašyta straipsnyje \cite{ModelsGoMAD} (žr. \ref{img:nuotraukuKolapsas} pav.). Čia matoma, kad didėjant generacijų skaičiui modelis pradeda kurti vis panašesnes žmonių nuotraukas. Vėlesnėse generacijose beveik visi žmonės yra vienodos odos spalvos, jų veiduose matoma vienoda šypsena, o nuotraukų fonai tampa vienodi – dažniausiai žali arba pilki. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{img/nuotraukuKolapsas.png}
-    \caption{\textbf{\cite{ModelsGoMAD} straipsnyje pateiktas skirtingų modelio iteracijų generuojamų nuotraukų pavizdys.}. Nuotraukose matoma, kaip keičiantis t (generacijų (angl. \textsl{generations}) skaičiui) modelio įvairovė nyksta. Tai atsispindi žmonių odos ir plaukų spalvų, emocijų, drabužių bei aplinkos įvairovės sumažėjime.}  
+    \caption{\textbf{\cite{ModelsGoMAD} straipsnyje pateiktas skirtingų modelio iteracijų generuojamų nuotraukų pavyzdys.}. Nuotraukose matoma, kaip keičiantis t (generacijų (angl. \textsl{generations}) skaičiui) modelio įvairovė nyksta. Tai atsispindi žmonių odos ir plaukų spalvų, emocijų, drabužių bei aplinkos įvairovės sumažėjime.}  
     \label{img:nuotraukuKolapsas}
 \end{figure}
 
@@ -179,7 +176,7 @@ Kitaip nei anksčiau minėti klaidų tipai šis nepriklauso nuo duomenų kiekio.
 
 \subsubsection{Didelių kalbos modelių kolapsas}
 
-Dideli kalbos modeliai (LKM) taip pat patiria DI modelių kolapsą, kuris vyksta dėl tų pačių klaidų tipų. Dėl klaidų kaupimosi modelio generuojamas tekstas tampa mažiau įvairus, o rezultatuose pradeda dominuoti pasikartojimai, prarandant kalbinę įvairovę (žr. \ref{img:textCollapse} pav.).
+Dideli kalbos modeliai taip pat patiria DI modelių kolapsą, kuris vyksta dėl tų pačių klaidų tipų. Dėl klaidų kaupimosi modelio generuojamas tekstas tampa mažiau įvairus, o rezultatuose pradeda dominuoti pasikartojimai, prarandant kalbinę įvairovę (žr. \ref{img:textCollapse} pav.).
 
 \subsubsection{DI modeliai valgo save}
 Dar viena DI modelių kolapso priežasčių yra netinkamas duomenų atrinkimas ir naudojimas mokymosi procese. Tyrime \cite{ModelsGoMAD} nagrinėjami skirtingi mokymo ciklai, vadinami „save valgančiais ciklais“ (angl. \textsl{autophagous loops}), kurie parodo, kaip modelio mokymas su sugeneruotais vaizdiniais duomenimis gali lemti kolapsą. Save valgantys ciklai priskiriami trims kategorijoms: Sintetinių duomenų ciklus, sintetinių augmentacijų ciklus ir į ciklus su šviežiais duomenimis. Ciklų vizualizacija žr. \ref{img:ciklai} pav.
@@ -210,7 +207,7 @@ Dar viena DI modelių kolapso priežasčių yra netinkamas duomenų atrinkimas i
 
 
 
-Taip pat svarbu paminėti, kad ryškią rolę save valgančiuose cikluose turi ir duomenų atrankos šališkumo kiekvienoje mokymosi iteracijoje koeficientas \(\lambda \). \cite{ModelsGoMAD} straipsnyje nurodyta, jog visai netaikant šio koeficiento modeliai nustoja generuoti kokybiškus ir įvairius duomenis, kas ir yra DI modelų kolapso bruožas. Taikant \(\lambda\), situacija kinta - kokybė gali būti visai neblogai išlaikoma, bet duomenų įvairovė smarkiai sumažėja, kas taip pat yra kolapso bruožas. 
+Taip pat svarbu paminėti, kad ryškią rolę save valgančiuose cikluose turi ir duomenų atrankos šališkumo kiekvienoje mokymosi iteracijoje koeficientas \(\lambda \). Alemohammad et al. tyrime\cite{ModelsGoMAD} nurodo, jog visai netaikant šio koeficiento modeliai nustoja generuoti kokybiškus ir įvairius duomenis, kas ir yra DI modelų kolapso bruožas. Taikant \(\lambda\), situacija kinta - kokybė gali būti visai neblogai išlaikoma, bet duomenų įvairovė smarkiai sumažėja, kas taip pat yra kolapso bruožas. 
 
 \subsubsubsection{Sintetinių duomenų ciklai}
 
@@ -233,7 +230,7 @@ Nors modelių kolapso tema yra gana nauja (pirmieji straipsniai, kuriuose pateik
 
 \subsubsection{Siūlomi sprendiniai mažinti DI kolapso rizikas}
 
-Tyrime \cite{DesniuPasiulymai} pateikiami įvairūs praktiniai sprendimai, skirti apsaugoti DI modelius nuo kolapso. Pateikiami sprendiniai:
+Dohmatob et al. \cite{DesniuPasiulymai} tyrime pateikia įvairius praktinius sprendimus, skirti apsaugoti DI modelius nuo kolapso. Pateikiami sprendiniai:
 
 \begin{enumerate}
     \item \textbf{Realių ir DI sugeneruotų duomenų maišymas}:
@@ -311,17 +308,16 @@ Reglamento 4 skyriaus 2 punkte numatyta, kad bendrosios paskirties DI sistemos, 
     \item Mažinti modelio degradacijos galimybes. Kaip aptarta \cite{AICollapseNature} ir \cite{DesniuPasiulymai}, per didelis sintetinių duomenų kiekis sukelia skirstinių poslinkio ir retų duomenų praradimo klaidas.
 \end{itemize}
 
-Svarbu paminėti, jog duomenų žymėjimas ir šališkumo tikrinimas apsaugoja tik didelės rizikos DI sistemas, nes reglamente šie punktai taikomi tik šiom sistemoms. 
-% Didelės rizikos DI sistemos, tai tokios sistemos, kurios daro įtaką DI sistemų naudotojų gyvybei.
+Svarbu paminėti, jog duomenų žymėjimas ir šališkumo tikrinimas apsaugoja tik didelės rizikos DI sistemas, nes reglamente šie punktai taikomi tik šiom sistemoms. Didelės rizikos DI sistemos yra tokios, kurios kelia didelę riziką Europos sąjungos piliečių sveikatai, saugumui ar pagrindinėms teisėms, tačiau kurių svarbi socialinė ir ekonominė nauda atsveria šias rizikas.
 
 Apibendrinant, duomenų žymėjimas ir šališkumo kontrolė tiesiogiai sprendžia duomenų kokybės ir įvairovės klausimus, kurie yra esminiai norint apsaugoti modelius nuo DI kolapso. Sintetinių duomenų atpažinimas padeda efektyviai valdyti švarius ir užtikrina, kad DI sistemų sugeneruota informacija būtų naudojama atsakingai.
 
 
 
 
-\section{Eksperimentinis tyrimas}
-\subsection{Tyrimo metodai}
-Tyrimo tikslas identifikuoti ciklų, kuriuose modeliai mokymuisi naudoja sintetinius duomenis, vizualius pokyčius kitokiuose duomenyse nei žmonių nuotraukose. Šiuo tyrimu siekta palyginti keturių skirtingų ciklų efektyvumą, pasitelkiant variacinio automatinio koduotojo (angl. \textsl{Variational Autoencoder} (VAE)) gilųjį neuroninį tinklą ir MNIST \cite{MNIST} duomenų rinkinį. Lyginami šie straipnyje \cite{ModelsGoMAD} išskirti ciklai:
+\section{Eksperimentas}
+\subsection{Eksperimento metodai}
+Eksperimento tikslas identifikuoti ciklų, kuriuose modeliai mokymuisi naudoja sintetinius duomenis, vizualius pokyčius nuotraukose. Šiuo eksperimentu siekta palyginti keturių skirtingų ciklų efektyvumą, pasitelkiant variacinio autoenkoderio (angl. \textsl{Variational Autoencoder} (VAE)) gilųjį neuroninį tinklą ir MNIST \cite{MNIST} duomenų rinkinį. Lyginami šie straipnyje \cite{ModelsGoMAD} išskirti ciklai:
 \begin{enumerate}
     \item Tik sintetinių duomenų ciklai.
     \item Sintetinių duomenų ciklai su augmentacijomis.
@@ -339,27 +335,44 @@ Tyrimo tikslas identifikuoti ciklų, kuriuose modeliai mokymuisi naudoja sinteti
 \end{itemize}
 
 
-MNIST rinkinys buvo pasirinktas dėl jo plačiai paplitusio naudojimo kaip pavyzdinio duomenų rinkinio DI modelių mokymui, taip pat dėl to, kad jis buvo naudojamas kolapsui atvaizduoti tyrime \cite{ModelsGoMAD}. Minėtame tyrime buvo nagrinėjamas sintetiniais duomenimis pagrįstų ciklų poveikis DI modeliams keičiant parametrą \(\lambda\) (lambda efektų paaiškinimas žr. \ref{img:ciklai} pav.). Visgi, šiame tyrime pasirinkta nagrinėti ir kitų ciklų vizualius pokyčius, nekeičiant parametro \(\lambda\). 
+MNIST rinkinys buvo pasirinktas dėl jo plačiai paplitusio naudojimo kaip pavyzdinio duomenų rinkinio DI modelių mokymui, taip pat dėl to, kad jis buvo naudojamas kolapsui atvaizduoti tyrime \cite{ModelsGoMAD}. Minėtame tyrime buvo nagrinėjamas sintetiniais duomenimis pagrįstų ciklų poveikis DI modeliams keičiant parametrą \(\lambda\) (lambda efektų paaiškinimas žr. \ref{img:ciklai} pav.). Visgi, šiame eksperimente pasirinkta nagrinėti ir kitų ciklų vizualius pokyčius, nekeičiant parametro \(\lambda\). 
 
-VAE tinklas buvo pasirinktas atsižvelgiant į \cite{AICollapseNature} tyrimą, kur šiame modelyje pasireiškė specifinės klaidos, susijusios su modelių kolapsu (klaidos aptartos 1.2.1.1. skyriuje). Tyrimu siekta patikrinti, ar šios klaidos ne tik aprašomos literatūroje, bet ir gali būti vizualiai pastebimos kitokiuose duomenų rinkiniuose, nei žmonių nuotraukos. Be to, tyrimuose buvo naudoti kiti metodai, \cite{ModelsGoMAD} straipsnyje duomenys apdoroti naudojant DDPM modelį su MNIST duomenų rinkiniu, o \cite{AICollapseNature} išviso nepateikė informacijos apie naudotą duomenų rinkinį.
+VAE tinklas buvo pasirinktas atsižvelgiant į \cite{AICollapseNature} tyrimą, kur šiame modelyje pasireiškė specifinės klaidos, susijusios su modelių kolapsu (klaidos aptartos 1.2.1.1. skyriuje). Eksperimentu siekta patikrinti, ar šios klaidos ne tik aprašomos literatūroje, bet ir gali būti vizualiai pastebimos kitokiuose duomenų rinkiniuose, nei žmonių nuotraukos. Be to, minėtuose tyrimuose buvo naudoti kiti metodai, \cite{ModelsGoMAD} straipsnyje duomenys apdoroti naudojant DDPM modelį su MNIST duomenų rinkiniu, o \cite{AICollapseNature} išviso nepateikė informacijos apie naudotą duomenų rinkinį.
 
 \subsubsection{Eksperimentinė aplinka}
 
-Visiems modeliams mokyti buvo naudojamos 5 generacijos. Vieną generaciją sudarė 20 epochų, o duomenų rinkinio dydis (angl. \textsl{batch size}) buvo 256. Pasirinkimas vykdyti 20 epochų su 256 rinkinio dydžiu per vieną generaciją paremtas \cite{ModelsGoMAD} tyrimo metodologija. Pasirinkimas vykdyti 5 generacijas priimtas, nes tyrime \cite{AICollapseNature} pastebėta, kad modelio kolapsas naudojant VAE gali būti pastebimas jau ankstyvosiose generacijose.
+Visiems modeliams mokyti buvo naudojamos 5 generacijos. Vieną generaciją sudarė 20 epochų, o duomenų rinkinio dydis (angl. \textsl{batch size}) buvo 256. Pasirinkimas vykdyti 20 epochų su 256 rinkinio dydžiu per vieną generaciją paremtas \cite{ModelsGoMAD} tyrimo eksperimentų metodologija. Pasirinkimas vykdyti 5 generacijas priimtas, nes tyrime \cite{AICollapseNature} pastebėta, kad modelio kolapsas naudojant VAE gali būti pastebimas jau ankstyvosiose generacijose.
 
-Po kiekvienos mokymosi generacijos modelį mokome iš naujo renmdamiesi \cite{ModelsGoMAD} metodu. Tam, kad modeliai kažkiek išmoktų užduotį pirmos generacijos metu modelis mokosi su MNIST orginaliais duomenimis. Realių duomenų procentas epochoje (nuo antros generacijos) nustatytas 75\% vykdant sintetinių augmentacijų ciklą, o vykdant ciklą su šviežiais duomenimis realių naujų duomenų buvo taip pat naudota 75\%.
+Po kiekvienos mokymosi generacijos modelį mokome iš naujo renmdamiesi \cite{ModelsGoMAD} metodu. Tam, kad modeliai kažkiek išmoktų užduotį pirmos generacijos metu modelis mokosi su MNIST orginaliais duomenimis. 
+% Realių duomenų procentas epochoje (nuo antros generacijos) nustatytas 75\% vykdant sintetinių augmentacijų ciklą, o vykdant ciklą su šviežiais duomenimis realių naujų duomenų buvo taip pat naudota 75\%.
 
-Po kiekvienos mokymosi generacijos modelis yra mokomas iš naujo, remiantis \cite{ModelsGoMAD} metodu. Siekiant, kad modeliai bent iš dalies išmoktų užduotį, pirmosios generacijos metu modelis yra mokomas naudojant MNIST originalius duomenis. Pradedant nuo antrosios generacijos, sintetinių duomenų procentas epochoje nustatytas 25\% tiek vykdant sintetinių augmentacijų ciklą, tiek vykdant ciklą su šviežiais duomenimis.
+
+\begin{itemize}
+    \item \textbf{Sintetinių duomenų ciklas} -
+    Duomenų rinkinio dydis: 256 
+    \item \textbf{Sintetinių augmentacijų ciklas} -
+    Duomenų rinkinio dydis: 256, realių duomenų procentas epochoje (nuo antros generacijos): 75\%
+    \item \textbf{Ciklas su šviežiais duomenimis} -
+    Duomenų rinkinio dydis: 256, realių šviežių duomenų procentas epochoje (nuo antros generacijos): 75\%
+    \item \textbf{Standartinio modelio mokymas nepriklausantis save valgantiems ciklams} -
+    Duomenų rinkinio dydis: 256
+\end{itemize}
+
+Po kiekvienos mokymosi generacijos modelis yra mokomas iš naujo, remiantis \cite{ModelsGoMAD} metodu. Siekiant, kad modeliai bent iš dalies išmoktų užduotį, pirmosios generacijos metu modelis yra mokomas naudojant MNIST originalius duomenis. 
+
+% Pradedant nuo antrosios generacijos, sintetinių duomenų procentas epochoje nustatytas 25\% tiek vykdant sintetinių augmentacijų ciklą, tiek vykdant ciklą su šviežiais duomenimis.
+
+
 
 Pasirinkimas naudoti nedidelį gilųjį neuroninį tinklą, mažą duomenų rinkinį ir apribotą epochų bei generacijų skaičių priimtas, nes tai leidžia sumažinti energijos sąnaudas, prisidedant prie tvaresnio mokslinio darbo, kaip pabrėžia \cite{energy_2019}. 
 
 
 
 
-\subsection{Tyrimo rezultatai}
+\subsection{Eksperimento rezultatai}
 
 \subsubsection{Sintetinių duomenų ciklas}
-VAE modelio kolapsas, naudojant tik sintetinius duomenis, buvo labai ryškus (žr. \ref{img:sintetiniai_gen_1_5} pav.). Kaip ir tikėtasi, duomenys smarkiai suvienodėjo – iš rinkinio netgi dingo kai kurie skaičiai. Atpažįstami tik pusę skaičių (0, 3, 6, 8, 9), tačiau dauguma jų yra labai blankūs. Tuo tarpu pirmoje generacijoje matomi visi skaičiai nuo 1 iki 9, kaip ir tikėtina naudojant MNIST duomenų rinkinį (žr. \ref{img:sintetiniai_gen_1_5} pav.).
+VAE modelio kolapsas, naudojant tik sintetinius duomenis, buvo labai ryškus (žr. \ref{img:sintetiniai_gen_1_5} pav.). Kaip ir tikėtasi, duomenys smarkiai suvienodėjo – iš rinkinio netgi dingo kai kurie skaitmenys. Atpažįstami tik pusę skaitmenų (0, 3, 6, 8, 9), tačiau dauguma jų yra labai blankūs. Tuo tarpu pirmoje generacijoje matomi visi skaičiai nuo 1 iki 9, kaip ir tikėtina naudojant MNIST duomenų rinkinį (žr. \ref{img:sintetiniai_gen_1_5} pav.).
 
 \begin{figure}[H]
     \centering
@@ -436,7 +449,7 @@ Išvestys smarkiai nepakito, gal kiek ryškesni pasidarė (žr. \ref{img:fresh_g
 
 \subsubsection{Standartinio modelio mokymas nepriklausantis save valgantiems ciklams}
 
-Atliktas tyrimas parodė, kad modelis turi gebėjimą mokytis, vizualūs pokyčiai tarp generacijų atskleidžia skaičių paryškėjimą (žr. \ref{img:original_gen_1_5} pav.).
+Atliktas eksperimentas parodė, kad modelis turi gebėjimą mokytis, vizualūs pokyčiai tarp generacijų atskleidžia skaičių paryškėjimą (žr. \ref{img:original_gen_1_5} pav.).
 
 \begin{figure}[H]
     \centering
@@ -460,11 +473,6 @@ Atliktas tyrimas parodė, kad modelis turi gebėjimą mokytis, vizualūs pokyči
 \end{figure}
 
 
-
-
-
-
-
 \subsection{Rezultatų aptarimas}
 
 Rezultatai patvirtina, kad kolapsas yra akivaizdus net ir naudojant kitus duomenų rinkinius, tokius kaip MNIST, sintetinių duomenų cikle. Naudojant tik sintetinius duomenis, kolapso požymiai pasireiškia jau po nedidelio generacijų skaičiaus (5): kai kurie skaičiai tampa sunkiai atpažįstami, o skaičių įvairovė išnyksta. 
@@ -473,17 +481,60 @@ Tačiau taikant kitas duomenų maišymo strategijas, tokias kaip realių ir sint
 
 
 
-\section{Išvados ir rekomendacijos}
+\section{Rezultatai ir išvados}
+
+\subsection{Rezultatai}
+Atlikus eksperimentą aprašytą skyriuje 2. buvo pasiekti tokie rezultatai:
+\begin{itemize}
+    \item \textbf{Sintetinių duomenų ciklas:}
+    \begin{itemize}
+        \item Po penktosios generacijos VAE modelis parodė stiprų kolapso efektą: prarastos daugelio skaitmenų įvairovės savybės.
+        \item Tik keli skaitmenys (0, 3, 6, 8, 9) buvo atpažįstami, tačiau ir jie buvo labai blankūs.
+    \end{itemize}
+    \item \textbf{Sintetinių augmentacijų ciklas:}
+    \begin{itemize}
+        \item Vizualiai rezultatų kokybė nuo pirmos iki penktos generacijos žymiai nesiskyrė.
+        \item Pastebėtas nežymus vaizdų suliejimas.
+    \end{itemize}
+    \item \textbf{Ciklas su šviežiais duomenimis:}
+    \begin{itemize}
+        \item Po penktos generacijos tinklo išvestys tapo šiek tiek ryškesnės.
+        \item Įvairovės praradimas nebuvo pastebėtas.
+    \end{itemize}
+    \item \textbf{Standartinio modelio mokymas:}
+    \begin{itemize}
+        \item Po penktos generacijos duomenų kokybė pagerėjo, vaizdai tapo ryškesni ir aiškesni.
+        \item Modelis parodė gebėjimą mokytis.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Išvados}
+Pagal literatūros apžvalgą ir atliktą eksperimentą padarytos tokios išvados:
+% DI modelių kolapsas yra procesas, kylantis dėl modelių mokymo su jų pačių sugeneruotais duomenimis. Šis reiškinys lemia informacijos ir duomenų skirstinio struktūros praradimą, kuris daro neigiamą poveikį modelių veikimui ir patikimumui. Naujų realių duomenų įtraukimas į mokymo procesą bei jų žymėjimo užtikrinimas yra esminiai veiksniai, padedantys sumažinti kolapso riziką. Kadangi DI modelių kolapsas gali turėti reikšmingų ekonominių, ekologinių ir socialinių pasekmių, būtina skirti ypatingą dėmesį šios problemos valdymui.
 
-DI modelių kolapsas yra procesas, kylantis dėl modelių mokymo su jų pačių sugeneruotais duomenimis. Šis reiškinys lemia informacijos ir duomenų skirstinio struktūros praradimą, kuris daro neigiamą poveikį modelių veikimui ir patikimumui. Naujų realių duomenų įtraukimas į mokymo procesą bei jų žymėjimo užtikrinimas yra esminiai veiksniai, padedantys sumažinti kolapso riziką. Kadangi DI modelių kolapsas gali turėti reikšmingų ekonominių, ekologinių ir socialinių pasekmių, būtina skirti ypatingą dėmesį šios problemos valdymui.
+% Vienas iš būdų išvengti DI modelių kolapso yra tinkamas šališkumo kontrolės parametro \(\lambda\) nustatymas. Šis parametras padeda išlaikyti pusiausvyrą tarp sugeneruotų duomenų kokybės ir įvairovės, tačiau jo taikymas reikalauja daugiau tyrimų siekiant suprasti poveikį skirtinguose modeliuose.
 
-Vienas iš būdų išvengti DI modelių kolapso yra tinkamas šališkumo kontrolės parametro \(\lambda\) nustatymas. Šis parametras padeda išlaikyti pusiausvyrą tarp sugeneruotų duomenų kokybės ir įvairovės, tačiau jo taikymas reikalauja daugiau tyrimų siekiant suprasti poveikį skirtinguose modeliuose.
+% Europos Sąjungos DI reglamentas taip pat prisideda prie kolapso rizikos mažinimo. Jame numatytos priemonės, tokios kaip duomenų žymėjimas ir šališkumo kontrolė, gali padėti užtikrinti didesnį modelių stabilumą. Tačiau reglamentas šiuo metu koncentruojasi tik į didelės rizikos DI sistemas ir įsigalios tik 2026 metų rugpjūčio 2 d. Dėl to kyla klausimų, kaip dabartiniai ir ateities DI modeliai, apdorojantys didelius informacijos srautus iš interneto iki 2026 metų bus paveikti DI modelių kolapso. Ateityje didelę vertę galėtų turėti duomenų bazės, kurios užtikrina tikrų duomenų saugojimą ir prieinamumą, nes DI modelių generuojami duomenys gali smarkiai užteršti DI modelių mokymosi duomenis.
 
-Europos Sąjungos DI reglamentas taip pat prisideda prie kolapso rizikos mažinimo. Jame numatytos priemonės, tokios kaip duomenų žymėjimas ir šališkumo kontrolė, gali padėti užtikrinti didesnį modelių stabilumą. Tačiau reglamentas šiuo metu koncentruojasi tik į didelės rizikos DI sistemas ir įsigalios tik 2026 metų rugpjūčio 2 d. Dėl to kyla klausimų, kaip dabartiniai ir ateities DI modeliai, apdorojantys didelius informacijos srautus iš interneto iki 2026 metų bus paveikti DI modelių kolapso. Ateityje didelę vertę galėtų turėti duomenų bazės, kurios užtikrina tikrų duomenų saugojimą ir prieinamumą, nes DI modelių generuojami duomenys gali smarkiai užteršti DI modelių mokymosi duomenis.
+% Pastebima, kad DI kolapso tema dar nėra pakankamai ištirta. Ypač trūksta tyrimų, kurie nagrinėtų sugeneruotų duomenų maišymo poveikį tarp skirtingų modelių, vykdančių panašias užduotis. Toks tyrimas galėtų geriau atspindėti dabartinę interneto duomenų struktūrą. 
 
-Pastebima, kad DI kolapso tema dar nėra pakankamai ištirta. Ypač trūksta tyrimų, kurie nagrinėtų sugeneruotų duomenų maišymo poveikį tarp skirtingų modelių, vykdančių panašias užduotis. Toks tyrimas galėtų geriau atspindėti dabartinę interneto duomenų struktūrą. 
+\begin{itemize}
+    \item \textbf{DI modelių kolapso pobūdis:}
+    \begin{itemize}
+        \item DI modelių kolapsas atsiranda, kai modeliai mokomi naudojant jų pačių sugeneruotus duomenis, o tai lemia duomenų įvairovės praradimą.
+        \item Eksperimentai patvirtino, kad kolapsas sintetinių duomenų cikluose yra neišvengiamas ir pasireiškia jau po kelių generacijų.
+    \end{itemize}
+    \item \textbf{Maišymo strategijos efektyvumas:}
+    \begin{itemize}
+        \item Realūs ir sintetiniai duomenys (augmentacijos ir šviežių duomenų cikluose) sumažina kolapso riziką, tačiau netinkamas santykis šviežių duomenų cikluose gali sukelti kokybės praradimus, o sintetinių augmentacijų cikluose tik nutolinti Di modelių kolapsą.
+        \item Naujų realių duomenų įtraukimas į mokymo procesą išlieka efektyviausiu būdu mažinti kolapso riziką.
+    \end{itemize}
+    \item \textbf{Reguliavimo svarba:}
+    \begin{itemize}
+        \item Europos Sąjungos DI reglamentas, apimantis duomenų žymėjimą ir šališkumo kontrolę, gali netiesiogiai padėti DI modeliams išvengti kolapso.
+        \item Reglamentas įsigalios tik 2026 metais, todėl kolapso prevencijai būtina plėtoti alternatyvius sprendimus iki to laiko.
+    \end{itemize}
+\end{itemize}
 
 
 
@@ -493,7 +544,7 @@ Atsižvelgiant į gautas išvadas, pateikiamos šios rekomendacijos:
 \begin{itemize}
     \item \textbf{Mokslininkams:} Rekomenduojama tęsti tyrimus, siekiant geriau suprasti sintetinių ir šviežių realių duomenų santykio poveikį DI modelių stabilumui bei jų kokybei. Taip pat būtina gilintis į šališkumo kontrolės parametro \(\lambda\) reikšmę skirtingose generatyvinėse architektūrose ir mokymosi cikluose. Siūloma tyrinėti ilgalaikį sugeneruotų duomenų maišymo poveikį tarp skirtingų modelių ir jų rezultatų kokybę. Tai padėtų geriau suprasti dabartines ir būsimas interneto duomenų būsenas bei jų įtaką DI modelių stabilumui.
     \item \textbf{Praktikams:} Mokymo procesams svarbu užtikrinti, kad duomenų rinkiniai būtų reguliariai atnaujinami šviežiais realiais duomenimis, taip išlaikant įvairovę ir užkertant kelią modelių kolapsui. Reikėtų užtikrinti, kad sintetiniai duomenys būtų naudojami subalansuotai, neviršijant saugių proporcijų.
-    \item \textbf{politikos kūrėjams ir vykdytojams:} Siūloma Europos Sąjungos DI reglamente toliau stiprinti reikalavimus sugeneruotų duomenų žymėjimui ir kontrolės mechanizmams. Be to, reikėtų svarstyti įtraukti daugiau nuostatų, skirtų mažesnės rizikos DI sistemoms, kurios taip pat gali patirti kolapsą. Svarbu ir tai, kad ir kitos valdomieji kūnai kurtų kitus reglamentus ar įstatymus skirtus DI kolapso mažinimo tematikai. 
+    \item \textbf{Politikos kūrėjams ir vykdytojams:} Siūloma Europos Sąjungos DI reglamente toliau stiprinti reikalavimus sugeneruotų duomenų žymėjimui ir kontrolės mechanizmams. Be to, reikėtų svarstyti įtraukti daugiau nuostatų, skirtų mažesnės rizikos DI sistemoms, kurios taip pat gali patirti kolapsą. Svarbu ir tai, kad ir kitos valdomieji kūnai kurtų kitus reglamentus ar įstatymus skirtus DI kolapso mažinimo tematikai. 
     \item \textbf{Bendruomenei:} Rekomenduojama didinti informuotumą apie DI modelių kolapso rizikas ir jų prevencijos svarbą. Švietimas šia tema gali padėti tiek naudotojams, tiek kūrėjams atsakingai naudoti DI technologijas. Taip pat svarbu atkreipti dėmesį į tai, kaip sistemų naudotojai prisideda prie duomenų kokybės, ir skatinti juos neteršti interneto modelių sugeneruotais duomenimis, kurie gali neigiamai paveikti būsimų modelių mokymosi procesus.
 
 \end{itemize}
